@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+        body, html {
+            line-height: 1.15;
+            font-size: {{ size }}px;
+            font-family: Manrope;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5 {
+            margin: 0;
+        }
+
+        .badge {
+            max-width: fit-content;
+            height: 6rem;
+            border: 0.25rem solid {{ accent }};
+            border-radius: 1.25rem;
+            background: linear-gradient({{ bottom }} 0%, {{ top }} 100%);
+        }
+
+        .container {
+            padding: 1rem;
+            display: flex;
+        }
+
+        .title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .subtitle {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: {{ accent }};
+        }
+
+    </style>
+    <title>Simple-Badge-Gen</title>
+</head>
+<body>
+    <div class="badge">
+        <div class="container">   
+            <div class="text-container">
+                <h1 class="title">{{ title }}</h1>
+                <h2 class="subtitle">{{ subtitle }}</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
