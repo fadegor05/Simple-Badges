@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+:root {
+    --accent-color: #eeeeee;
+    --bottom-color: #000000;
+    --top-color: #666666;
+    --text-size: 16px;
+}
+
+
+body, html {
+    line-height: 1.15;
+    font-size: var(--text-size);
+    font-family: Manrope;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+.badge {
+    display: none;
+    max-width: fit-content;
+    height: 6rem;
+    border: 0.25rem solid var(--accent-color);
+    border-radius: 1.25rem;
+    background: linear-gradient(var(--bottom-color) 0%, var(--top-color) 100%);
+}
+
+.container {
+    padding: 1rem;
+    display: flex;
+}
+
+#title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+#subtitle {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}

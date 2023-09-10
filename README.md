@@ -1,5 +1,5 @@
-# Simple-Badge-Gen
-Simple-Badge-Gen is a simple and easy to use generator of badges, which you can use anywhere, starting from your github account ending website. You can use it to easily give links to yours Telegram, Github, Youtube, Discord accounts.
+# Simple-Badges
+Simple-Badges is a simple and easy to use generator of badges, which you can use anywhere, starting from your github account ending website. You can use it to easily give links to yours Telegram, Github, Youtube, Discord accounts.
 
 # Examples
 <img src="readmemd/example1.png" height="100">
@@ -9,9 +9,9 @@ Simple-Badge-Gen is a simple and easy to use generator of badges, which you can 
 <img src="readmemd/example5.png" height="100">
 
 # How it works
-First you need to do is a start a Flask server, after that you just need to enter in your browser some kind of code for your <b>Simple-Badge</b>. To generate badge like this you need just use easy <b>Simple-Badges</b> syntax:
+One thing you need to do is open <b>index.html</b> in your browser. To generate badge like this you need just use easy <b>Simple-Badges</b> syntax:
 
-<b>Flask Server Address</b>/<b>Title</b>/<b>Subtitle</b>/<b>Color in Hex</b>/<b>Height in PX</b>
+<b>Python Server Adress</b>/?<b>title=Title</b>&<b>subtitle=Subtitle</b>&<b>color=Color in Hex</b>&<b>px=Height in PX</b>
 
 ### Example:
 
@@ -19,28 +19,20 @@ First you need to do is a start a Flask server, after that you just need to ente
 
 
 ``
-http://127.0.0.1:5000/Title/Subtitle/8c26ab/150
+http://127.0.0.1:8000/?title=Title&subtitle=Subtitle&color=8c26ab&px=96
 ``
-
-# Requirements
-- Flask
-- html2img
-- Pillow
 
 # Installation
 ### Clone this Github project
 ```
-git clone https://github.com/fadegor05/Simple-Badge-Gen
+git clone https://github.com/fadegor05/Simple-Badges
 ```
-### Creating a new python virtual environment
+### Building a Docker image
 ```
-py -m venv venv
+docker build -t simple-badges-image .
 ```
-### Installing Flask, html2img, Pillow
+### Run the docker container from image
 ```
-pip install Flask html2img PILLOW
+docker run -rm -t --name simple-badges-instance -p 8000:5000 simple-badges
 ```
-### Start the developer Flask server
-```
-py main.py
-```
+instead of port <b>8000</b> you can use any you want.
